@@ -1,25 +1,28 @@
 const express = require("express");
-const app = express();
-const notes = require("./db/db.json");
+const path = require("path");
 const fs = require("fs");
-
-// Helper method for generating unique ids
-// const uuid = require("./helpers/uuid");
-
-// Enviroment variable
+const notes = require("./db/notes.json");
+const uuid = require("./helpers/uuid");
+const app = express();
 const PORT = 3001;
+
+// Middleware
+app.use(express.json());
+app.use(express.static(__dirname + "/public"));
+app.use(express.urlencoded({ extended: true }));
 
 // GET request for root
 app.get("/", (req, res) => {
-  res.send("Take Some Notes");
+  res.sendFile(__dirname + "/public/index.html");
 });
 
-app.get("/api/notes", (req, res) => {
-  res.send(notes);
+app.get("/notes.html", (req, res) => {
+  res.sendFile(__dirname + "/public/notes.html");
 });
 
-app.get("/api/notes/:id", (req, res) => {
-  res.send(req.params);
-});
+// app.post("/notes.html", (req, res) => {
+//   res.write(JSON(notes.json));
+// });
 
+// Starts server listening on port var
 app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));

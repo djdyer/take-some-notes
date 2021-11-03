@@ -74,7 +74,7 @@ When selecting any existing note, text detail appears at right column.
 
 Plus sign clears fields to enter new note.
 
-Minus sign removes note from storage.
+Trash can removes note from storage.
 
 ```
 

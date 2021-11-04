@@ -46,8 +46,7 @@ command-line to initialize at:
 localhost:3001
 ```
 
-**Deployed Remotely** : [Heroku](https://calm-fortress-30392.herokuapp.com/notes/)
-
+**Deployed Remotely** : [Heroku](https://calm-fortress-30392.herokuapp.com/)
 <br />
 
 ## License

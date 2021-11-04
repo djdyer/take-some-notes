@@ -49,8 +49,8 @@ localhost:3001
 
 ## Deployed
 
-[<img src="https://www.techuz.com/blog/wp-content/uploads/2021/03/heroku.png" height="50px">](https://https://www.heroku.com/)  
-[Take Some Notes App on Heroku](https://calm-fortress-30392.herokuapp.com/)
+[<img src="https://www.techuz.com/blog/wp-content/uploads/2021/03/heroku.png" height="50px">](https://www.heroku.com/)  
+[Take Some Notes App on Heroku](https://take--some--notes.herokuapp.com//)
 
 <br />
 <br />

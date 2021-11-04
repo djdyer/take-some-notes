@@ -4,18 +4,20 @@ const fs = require("fs");
 const uuid = require("./helpers/uuid");
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(express.json());
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
+// API Routes - getting existing notes
 app.get("/api/notes", (req, res) => {
   const notes = readNotes();
   res.json(notes);
 });
 
+// Allows addition of one new note to existing json
 app.post("/api/notes", (req, res) => {
   const notes = readNotes();
   const note = req.body;

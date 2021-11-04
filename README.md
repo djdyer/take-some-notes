@@ -48,12 +48,10 @@ Copyright (c) David Dyer [2021]
 
 ## Demo
 
-[![](assets/demo/...png)](https://youtu.be/...)
-
 <br />
 
-<img src="assets/demo/...png" width = "800">
-<img src="assets/demo/...png" width = "800">
+<img src="./assets/demo/ss1.png" width = "600">
+<img src="./assets/demo/ss2.png" width = "600">
 
 <br />
 

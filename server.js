@@ -52,7 +52,10 @@ app.get("/", (req, res) => {
 
 app.get("/notes", (req, res) => {
   res.sendFile(path.join(__dirname, "/public/notes.html"));
-  // res.json(notes);
+});
+
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/404.html"));
 });
 
 // Starts server listening on port var

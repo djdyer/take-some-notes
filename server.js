@@ -1,8 +1,9 @@
 const express = require("express");
 const path = require("path");
-const fs = require("fs");
+// const fs = require("fs");
 const notes = require("./db/notes.json");
 const uuid = require("./helpers/uuid");
+
 const app = express();
 const PORT = 3001;
 
@@ -13,11 +14,11 @@ app.use(express.urlencoded({ extended: true }));
 
 // GET request for root
 app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/index.html");
+  res.sendFile(__dirname + "/public/pages/index.html");
 });
 
-app.get("/notes.html", (req, res) => {
-  res.sendFile(__dirname + "/public/notes.html");
+app.get("/api/notes", (req, res) => {
+  res.sendFile(__dirname + "/public/pages/notes.html");
 });
 
 // app.post("/notes.html", (req, res) => {

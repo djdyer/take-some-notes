@@ -1,7 +1,6 @@
 const express = require("express");
 const path = require("path");
-// const fs = require("fs");
-const notes = require("./db/notes.json");
+const fs = require("fs");
 const uuid = require("./helpers/uuid");
 
 const app = express();
@@ -9,21 +8,50 @@ const PORT = 3001;
 
 // Middleware
 app.use(express.json());
-app.use(express.static(__dirname + "/public"));
+app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 
-// GET request for root
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/public/pages/index.html");
-});
-
 app.get("/api/notes", (req, res) => {
-  res.sendFile(__dirname + "/public/pages/notes.html");
+  const notes = readNotes();
+  res.json(notes);
 });
 
-// app.post("/notes.html", (req, res) => {
-//   res.write(JSON(notes.json));
-// });
+app.post("/api/notes", (req, res) => {
+  const notes = readNotes();
+  const note = req.body;
+  const title = note.title;
+  const text = note.text;
+  const newNote = { title, text, id: uuid() };
+  notes.push(newNote);
+  writeNotes(notes);
+  res.json(newNote);
+});
+
+app.delete("/api/notes/:id", (req, res) => {
+  const notes = readNotes();
+  const updatedNotes = notes.filter((note) => note.id !== req.params.id);
+  writeNotes(updatedNotes);
+  res.json({ ok: true });
+});
+
+function readNotes() {
+  return JSON.parse(fs.readFileSync("./db/notes.json", "utf-8"));
+}
+
+function writeNotes(notes) {
+  const db = JSON.stringify(notes);
+  fs.writeFileSync("./db/notes.json", db, "utf-8");
+}
+
+// VIEW ROUTES
+app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/index.html"));
+});
+
+app.get("/notes", (req, res) => {
+  res.sendFile(path.join(__dirname, "/public/notes.html"));
+  // res.json(notes);
+});
 
 // Starts server listening on port var
-app.listen(PORT, () => console.log(`Listening on port ${PORT}...`));
+app.listen(PORT, () => console.log(`Listening on port ${PORT}...🚀`));

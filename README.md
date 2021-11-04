@@ -10,7 +10,6 @@
 - [License](#license)
 - [Demo](#demo)
 - [Criteria](#acceptance-criteria)
-- [Testing](#testing)
 - [Collaboration](#collaboration)
 
 <br />
@@ -36,17 +35,18 @@ SO THAT I can organize my thoughts and keep track of tasks I need to complete
 Application uses [Express](https://expressjs.com/) back end, and will run in terminal with:
 
 ```
-npm install
-node server
+npm start
 ```
 
-command-line to initialize at:
+Command-line to initialize server at:
 
 ```
 localhost:3001
 ```
 
 **Deployed Remotely** : [Heroku](https://calm-fortress-30392.herokuapp.com/)
+
+<br />
 <br />
 
 ## License

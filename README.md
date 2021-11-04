@@ -52,10 +52,9 @@ localhost:3001
 
 ## License
 
-<img src="./assets/images/isc.svg" height="20px"> <br />
-Copyright (c) David Dyer [2021]
+[<img src="./assets/images/isc.svg" height="20px">](https://choosealicense.com/licenses/isc/)
 
-[license](https://choosealicense.com/licenses/isc/)
+Copyright (c) David Dyer [2021]
 
 <br />
 
@@ -70,7 +69,7 @@ Copyright (c) David Dyer [2021]
 
 ## Criteria
 
-````
+```
 
 When opening app, landing page provides link to notes page.
 
@@ -118,7 +117,6 @@ Clone branch, submit pull request for review after completing any improvements.
 <br />
 <br />
 <br />
-Thanks for taking a look!
+Thanks for visiting!
+
 👾
-```
-````

@@ -7,6 +7,7 @@
 - [Description](#description)
 - [User Story](#user-story)
 - [Installation](#installation)
+- [Deployed](#deployed)
 - [License](#license)
 - [Demo](#demo)
 - [Criteria](#acceptance-criteria)
@@ -44,22 +45,24 @@ Command-line to initialize server at:
 localhost:3001
 ```
 
-**Deployed Remotely** : [Heroku](https://calm-fortress-30392.herokuapp.com/)
+<br />
+
+## Deployed
+
+[<img src="https://www.techuz.com/blog/wp-content/uploads/2021/03/heroku.png" height="50px">](https://https://www.heroku.com/)  
+[Take Some Notes App on Heroku](https://calm-fortress-30392.herokuapp.com/)
 
 <br />
 <br />
 
 ## License
 
-[<img src="./assets/images/isc.svg" height="20px">](https://choosealicense.com/licenses/isc/)
-
+[<img src="./assets/images/isc.svg" height="20px">](https://choosealicense.com/licenses/isc/)  
 Copyright (c) David Dyer [2021]
 
 <br />
 
 ## Demo
-
-<br />
 
 <img src="./assets/demo/ss1.png" width = "600">
 <img src="./assets/demo/ss2.png" width = "600">
